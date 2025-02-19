@@ -1,0 +1,14 @@
+def wrap(string, max_width):
+    c=max_width
+    s=0
+    a=[]
+    while s<len(string):
+        if s+max_width <= len(string):
+           a.append(string[s:s + max_width])
+        else:
+           a.append(string[s:])
+        s+=max_width
+    return "\n".join(a)
+        
+b=wrap("ABCDEFGHIJKLIMNOQRSTUVWXYZ",4)
+print(b)
